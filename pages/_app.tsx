@@ -5,13 +5,13 @@ import { ThemeProvider } from 'react-jss';
 import '../styles.css';
 
 const theme = {
-  color: {
-    black: '#000000',
+  colors: {
+    dark: '#000000',
+    white: '#ffffff',
     primary: '#0c0c0c',
     secondary: '#898880',
     secondaryLight: '#C5C3BC',
     accent: '#80722A',
-    accentMid: '#E9E7DE',
   },
 };
 
