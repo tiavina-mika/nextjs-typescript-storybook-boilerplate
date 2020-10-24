@@ -1,9 +1,17 @@
 module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
     extends: ['airbnb-typescript', 'prettier'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
       project: './tsconfig.json',
     },
+    plugins: [
+      "prefer-arrow"
+    ],
     rules: {
       'react/jsx-one-expression-per-line': ['error', { allow: 'literal' }],
       'react/jsx-curly-newline': [
@@ -23,6 +31,14 @@ module.exports = {
         {
           devDependencies: true,
         },
+      ],
+      "prefer-arrow/prefer-arrow-functions": [
+        "warn",
+        {
+          "disallowPrototype": true,
+          "singleReturnOnly": true,
+          "classPropertiesAllowed": false
+        }
       ],
       'react/react-in-jsx-scope': 'off',
       'react/jsx-props-no-spreading': 'off',
