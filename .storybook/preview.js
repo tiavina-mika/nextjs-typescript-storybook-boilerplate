@@ -1,4 +1,4 @@
-// import { withPaddings } from 'storybook-addon-paddings';
+import { withPaddings } from 'storybook-addon-paddings';
 import { ThemeProvider } from 'react-jss';
 import { theme } from '../pages/_app';
 
@@ -63,6 +63,13 @@ const viewports = {
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: { expanded: true },
+  paddings: [
+    { name: 'NoPadding', value: '0px', default: true },
+    { name: 'Small', value: '16px' },
+    { name: 'Medium', value: '32px' },
+    { name: 'Large', value: '64px' },
+  ],
   viewport: {
     viewports,
     defaultViewport: 'iphone678',
@@ -70,6 +77,7 @@ export const parameters = {
 }
 
 export const decorators = [
+  withPaddings,
   (Story) => (
     <ThemeProvider theme={theme}>
         <Story />
