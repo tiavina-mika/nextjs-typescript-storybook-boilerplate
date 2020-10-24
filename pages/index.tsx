@@ -27,6 +27,9 @@ const Home = () => {
           {' '}
           <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <div>
+          <img src='/images/bmw.jpg' alt="" />
+        </div>
       </main>
     </div>
   );
